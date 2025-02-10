@@ -8,18 +8,16 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.tooling.preview.Preview
-//import br.com.jacksonroberio.sophialibras.Greeting
 import br.com.jacksonroberio.sophialibras.R
-import br.com.jacksonroberio.sophialibras.ui.theme.SophiaLibrasTheme
+
 
 
 @Composable
 fun InicioScreen(
     onPlayClick: () -> Unit,
+    onCreditoClick: () -> Unit,
     onTermoPrivacidadeClick: () -> Unit,
     modifier: Modifier = Modifier
 ) {
@@ -28,7 +26,7 @@ fun InicioScreen(
     Box(modifier)
     {
         Image (
-            painter = painterResource(id = R.drawable.img_pista_com_arvore),
+            painter = painterResource(id = R.drawable.img_background_sala_de_aula),
             contentDescription = "Imagem de fundo",
             contentScale = ContentScale.Crop,
             modifier = Modifier.matchParentSize()
@@ -37,7 +35,7 @@ fun InicioScreen(
 
         Column (modifier = Modifier.align(Alignment.Center)) {
             Button (
-                onClick = { onPlayClick()},
+                onClick = { onPlayClick() },
                 modifier = Modifier.align(Alignment.CenterHorizontally)
             ){
                 Text(text = "Jogar")
@@ -51,7 +49,7 @@ fun InicioScreen(
             }
 
             Button (
-                onClick = { },
+                onClick = { onTermoPrivacidadeClick() },
                 Modifier.align(Alignment.CenterHorizontally)
             ){
                 Text(text = "Política de Privacidade")
@@ -59,20 +57,6 @@ fun InicioScreen(
 
         }
 
-
-        /*Text(
-            text = "Olá, Compose!",
-            color = Color.White,
-            modifier = Modifier.align(Alignment.Center)
-        )*/
     }
 
 }
-
-/*@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    SophiaLibrasTheme {
-        Greeting("Android")
-    }
-}*/
