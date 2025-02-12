@@ -1,5 +1,9 @@
 <resources>
     <string name="app_name">Sophia Libras</string>
+    <!-- Dialogos da professora -->
+    <string name="prof_dialogo_boas_vindas">OLÁ, SOU MARIA E SOU PROFESSORA DA SOPHIA, UMA GAROTINHA SURDA QUE ACABA DE CHEGAR NA ESCOLA! ELA SÓ SE COMUNICA ATRAVÉS DAS LIBRAS, VAMOS APRENDER UM POUQUINHO PARA PODEMOS SOCIALIZAR?</string>
+
+    <!-- Textos da tela Política de Privacidade -->
     <string name="secao1_paragrafo1">Sophia Libras é um jogo educativo que requer a conexão com a internet para download dos componentes mínimos para execução correta, desta forma e para uma melhor experiência do jogo, cookies precisam ser armazenados no seu dispositivo.</string>
     <string name="secao1_paragrafo2">O procedimento de captação de dados é feito totalmente de forma automatizada pelas plataformas envolvidas para seu pleno funcionamento, tais como o Google e o Construct 3, não nos responsabilizamos pelos dados captados por esses dois canais. Nós não salvamos nenhum dado do usuário em banco de dados ou/e na nuvem. Não conheceremos o seu endereço de IP, não podemos visualizar nenhum tipo de dado ou mensagem que você envie aos seus contatos, seu número telefônico, sua agenda, seu aplicativos instalados no seu dispositivo e nem solicitamos essas permissões durante o uso ou instalação do aplicativo. </string>
     <string name="secao2_paragrafo1">Ao baixar/instalar o jogo, o usuário consente nas captações dos dados da SEÇÃO I.</string>
