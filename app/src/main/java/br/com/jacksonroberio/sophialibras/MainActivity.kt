@@ -11,6 +11,8 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import br.com.jacksonroberio.sophialibras.ui.telas.BoasVindasScreen
+import br.com.jacksonroberio.sophialibras.ui.telas.EscolhaNumeroScreen
 import br.com.jacksonroberio.sophialibras.ui.telas.InicioScreen
 import br.com.jacksonroberio.sophialibras.ui.telas.PlayScreen
 import br.com.jacksonroberio.sophialibras.ui.telas.PoliticaPrivacidadeScreen
@@ -35,6 +37,19 @@ class MainActivity : ComponentActivity() {
                             )
                         }
                         composable("jogar") {
+                            BoasVindasScreen(
+                                onJogarAlfabetoClick = {},
+                                onJogarNumerosClick = {navController.navigate(("escolhaNumeros"))}
+                            )
+                        }
+                        composable("escolhaNumeros") {
+                            EscolhaNumeroScreen (
+                                onMuralClick = {},
+                                onJogarClick = {}
+                            )
+                            //PlayScreen(Modifier.fillMaxSize())
+                        }
+                        composable("jogarNumeros") {
                             PlayScreen(Modifier.fillMaxSize())
                         }
                         composable("politicaPrivacidade"){
