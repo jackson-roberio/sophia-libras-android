@@ -3,6 +3,7 @@ package br.com.jacksonroberio.sophialibras.ui.telas
 import android.view.ViewGroup
 import androidx.activity.OnBackPressedCallback
 import androidx.activity.compose.LocalOnBackPressedDispatcherOwner
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
@@ -17,7 +18,7 @@ import androidx.compose.ui.viewinterop.AndroidView
 fun PlayVogalSceen(){
     val context = LocalContext.current
 
-    val URL by remember { mutableStateOf("https://jacksonroberio.com.br") }
+    val URL by remember { mutableStateOf("https://jackson-roberio.github.io/sophia-libras/fase/vogal/index.html") }
 
     val onBackPressedDispatcher = LocalOnBackPressedDispatcherOwner.current?.onBackPressedDispatcher
 
@@ -47,5 +48,5 @@ fun PlayVogalSceen(){
         onDispose { callback.remove() }
     }
 
-    AndroidView(factory = {webView}, modifier = Modifier.fillMaxSize())
+    AndroidView(factory = {webView}, modifier = Modifier.fillMaxHeight().fillMaxSize())
 }

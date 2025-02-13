@@ -80,7 +80,7 @@ fun EscolhaNumeroScreen(
                     painter = painterResource(R.drawable.img_professora_maria_lado_esquerdo_1),
                     contentDescription = "Professora",
                     /*modifier = Modifier
-                        .align(Alignment.Bottom) // Alinha no final da tela
+                    .align(Alignment.Bottom) // Alinha no final da tela
                         .fillMaxWidth() // Opcional: define o tamanho da imagem como largura total
                     */
                 )
