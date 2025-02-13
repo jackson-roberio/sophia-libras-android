@@ -1,7 +1,16 @@
 <resources>
     <string name="app_name">Sophia Libras</string>
-    <!-- Dialogos da professora -->
+    <!-- Dialogos da professora: de boas vindas -->
     <string name="prof_dialogo_boas_vindas">OLÁ, SOU MARIA E SOU PROFESSORA DA SOPHIA, UMA GAROTINHA SURDA QUE ACABA DE CHEGAR NA ESCOLA! ELA SÓ SE COMUNICA ATRAVÉS DAS LIBRAS, VAMOS APRENDER UM POUQUINHO PARA PODEMOS SOCIALIZAR?</string>
+
+    <!-- Dialogo da professora: Informativo da tela Números  -->
+    <string name="prof_dialogo_informativo_numeros_1">AQUI VAMOS APRENDER OS NÚMEROS EM LIBRAS</string>
+    <string name="prof_dialogo_informativo_numeros_2">VOCÊ PODE TREINAR UM POUCO DANDO UMA OLHADA NO NOSSO MURAL OU IR DIRETO PARA O JOGO</string>
+
+    <!-- Dialogo da professora: Informativo da tela Vogal/Alfabeto  -->
+    <string name="prof_dialogo_informativo_alfabeto_1">AQUI VAMOS APRENDER AS LETRAS DO NOSSO ALFABETO EM LIBRAS.</string>
+    <string name="prof_dialogo_informativo_alfabeto_2">VOCÊ PODE TREINAR UM POUCO DANDO UMA OLHADA NO NOSSO MURAL OU IR DIRETO PARA O JOGO.</string>
+
 
     <!-- Textos da tela Política de Privacidade -->
     <string name="secao1_paragrafo1">Sophia Libras é um jogo educativo que requer a conexão com a internet para download dos componentes mínimos para execução correta, desta forma e para uma melhor experiência do jogo, cookies precisam ser armazenados no seu dispositivo.</string>

@@ -3,6 +3,7 @@ package br.com.jacksonroberio.sophialibras.ui.telas
 import android.view.ViewGroup
 import androidx.activity.OnBackPressedCallback
 import androidx.activity.compose.LocalOnBackPressedDispatcherOwner
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.getValue
@@ -13,17 +14,16 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.viewinterop.AndroidView
 
 @Composable
-fun PlayScreen(modifier: Modifier = Modifier) {
-
+fun PlayVogalSceen(){
     val context = LocalContext.current
 
-    val URL by remember { mutableStateOf("https://jackson-roberio.github.io/sophia-libras/fase/numeros/index.html") }
+    val URL by remember { mutableStateOf("https://jacksonroberio.com.br") }
 
     val onBackPressedDispatcher = LocalOnBackPressedDispatcherOwner.current?.onBackPressedDispatcher
 
     val webView = remember {
         android.webkit.WebView(context).apply {
-            layoutParams = ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,ViewGroup.LayoutParams.MATCH_PARENT)
+            layoutParams = ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT)
 
             settings.javaScriptEnabled = true
             webViewClient = android.webkit.WebViewClient()
@@ -47,6 +47,5 @@ fun PlayScreen(modifier: Modifier = Modifier) {
         onDispose { callback.remove() }
     }
 
-    AndroidView(factory = {webView}, modifier)
+    AndroidView(factory = {webView}, modifier = Modifier.fillMaxSize())
 }
-

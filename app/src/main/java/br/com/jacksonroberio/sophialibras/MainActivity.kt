@@ -13,9 +13,15 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import br.com.jacksonroberio.sophialibras.ui.telas.BoasVindasScreen
 import br.com.jacksonroberio.sophialibras.ui.telas.EscolhaNumeroScreen
+import br.com.jacksonroberio.sophialibras.ui.telas.EscolhaVogalScreen
 import br.com.jacksonroberio.sophialibras.ui.telas.InicioScreen
+import br.com.jacksonroberio.sophialibras.ui.telas.MuralNumerosScreen
+import br.com.jacksonroberio.sophialibras.ui.telas.MuralVogalScreen
 import br.com.jacksonroberio.sophialibras.ui.telas.PlayScreen
+import br.com.jacksonroberio.sophialibras.ui.telas.PlayVogalSceen
 import br.com.jacksonroberio.sophialibras.ui.telas.PoliticaPrivacidadeScreen
+import br.com.jacksonroberio.sophialibras.ui.telas.PrePlayNumerosScreen
+import br.com.jacksonroberio.sophialibras.ui.telas.PrePlayVogalScreen
 import br.com.jacksonroberio.sophialibras.ui.theme.SophiaLibrasTheme
 
 class MainActivity : ComponentActivity() {
@@ -31,32 +37,74 @@ class MainActivity : ComponentActivity() {
                         composable("inicio") {
                             InicioScreen(
                                 onPlayClick = {navController.navigate("jogar")},
-                                onCreditoClick = {},
-                                onTermoPrivacidadeClick = {navController.navigate("politicaPrivacidade")},
-                                modifier = Modifier.fillMaxSize()
+                                onAboutTheGameClick = {navController.navigate("politicaPrivacidade")}
                             )
                         }
+
                         composable("jogar") {
                             BoasVindasScreen(
-                                onJogarAlfabetoClick = {},
-                                onJogarNumerosClick = {navController.navigate(("escolhaNumeros"))}
+                                onJogarAlfabetoClick = {navController.navigate("escolhaVogal")},
+                                onJogarNumerosClick = {navController.navigate("escolhaNumeros")}
                             )
                         }
-                        composable("escolhaNumeros") {
-                            EscolhaNumeroScreen (
-                                onMuralClick = {},
-                                onJogarClick = {}
-                            )
-                            //PlayScreen(Modifier.fillMaxSize())
-                        }
-                        composable("jogarNumeros") {
-                            PlayScreen(Modifier.fillMaxSize())
-                        }
+
                         composable("politicaPrivacidade"){
                             PoliticaPrivacidadeScreen(
                                 onBackScreenClick = {navController.popBackStack()}
                             )
                         }
+
+                        /**********************
+                         * MÓDULO NÚMEROS
+                         *********************/
+                        composable("escolhaNumeros") {
+                            EscolhaNumeroScreen (
+                                onMuralClick = {navController.navigate("muralNumeros")},
+                                onJogarClick = {navController.navigate("prePlayNumeros")}
+                            )
+                        }
+
+                        composable("muralNumeros")
+                        {
+                            MuralNumerosScreen(onVoltarClick = {navController. popBackStack()})
+                        }
+
+                        composable("prePlayNumeros") {
+                            PrePlayNumerosScreen (
+                                onPlayClick = {navController.navigate("jogarNumeros")}
+                            )
+                        }
+
+                        composable("jogarNumeros") {
+                            PlayScreen(Modifier.fillMaxSize())
+                        }
+
+
+                        /**********************
+                         * MÓDULO VOGAL/ALFABETO
+                         *********************/
+                        composable("escolhaVogal") {
+                            EscolhaVogalScreen (
+                                onMuralClick = {navController.navigate("muralVogal")},
+                                onJogarClick = {navController.navigate("prePlayVogal")}
+                            )
+                        }
+
+                        composable("muralVogal")
+                        {
+                            MuralVogalScreen(onVoltarClick = {navController. popBackStack()})
+                        }
+
+                        composable("prePlayVogal") {
+                            PrePlayVogalScreen (
+                                onPlayClick = {navController.navigate("jogarVogal")}
+                            )
+                        }
+
+                        composable("jogarVogal") {
+                            PlayVogalSceen()
+                        }
+
                     }
                 }
             }

@@ -65,14 +65,13 @@ fun BoasVindasScreen(
             {
                 Column (
                     modifier = Modifier.align(Alignment.CenterVertically).padding(start = 25.dp)
-                //    Modifier.fillMaxHeight().weight(1f)
                 )
                 {
                     Button(
-                        onClick = {onJogarAlfabetoClick()},
+                        onClick = { onJogarAlfabetoClick() },
                         colors = ButtonDefaults.buttonColors(
                             containerColor = Color.White,
-                            contentColor = Color.Gray
+                            contentColor = Color.Black
                         ),
                         modifier = Modifier.padding(bottom = 15.dp)
                     )
@@ -85,10 +84,10 @@ fun BoasVindasScreen(
                     }
 
                     Button(
-                        onClick = {onJogarNumerosClick()},
+                        onClick = { onJogarNumerosClick()  },
                         colors = ButtonDefaults.buttonColors(
                             containerColor = Color.White,
-                            contentColor = Color.Gray
+                            contentColor = Color.Black
                         )
                     )
                     {
@@ -100,16 +99,11 @@ fun BoasVindasScreen(
                     }
                 }
 
-//                Box(
-                    //Modifier.fillMaxHeight().weight(1f).align(Alignment.Bottom)
-//                    modifier = Modifier.align(Alignment.Bottom)
-//                ){
                     Image(
                         painter = painterResource(R.drawable.img_professora_maria_2),
                         contentDescription = "Professora",
-//                        modifier = Modifier.align(Alignment.BottomEnd).fillMaxWidth()
                     )
-//                }
+
 
 
             }

@@ -1,7 +1,5 @@
 package br.com.jacksonroberio.sophialibras.ui.telas
 
-import android.text.style.BackgroundColorSpan
-import android.widget.Toast
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -16,7 +14,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -27,14 +24,9 @@ import br.com.jacksonroberio.sophialibras.ui.theme.goodMatch
 @Composable
 fun InicioScreen(
     onPlayClick: () -> Unit,
-    onCreditoClick: () -> Unit,
-    onTermoPrivacidadeClick: () -> Unit,
-    modifier: Modifier = Modifier
+    onAboutTheGameClick: () -> Unit
 ) {
 
-
-
-    //val contexto = LocalContext.current
 
     Box(){
         Image (
@@ -65,12 +57,11 @@ fun InicioScreen(
         {
 
             Column {
-            //(modifier = Modifier.align(Alignment.Center)) {
                 Button (
                     onClick = { onPlayClick() },
                     colors = ButtonDefaults.buttonColors(
                         containerColor = Color.White,
-                        contentColor = Color.Gray
+                        contentColor = Color(0xFF4D4D4D)
                     ),
                     modifier = Modifier.padding(bottom = 25.dp)
                         .align(Alignment.CenterHorizontally)
@@ -83,7 +74,7 @@ fun InicioScreen(
                 }
 
                 Button (
-                    onClick = { onTermoPrivacidadeClick() },
+                    onClick = { onAboutTheGameClick() },
                     colors = ButtonDefaults.buttonColors(
                         containerColor = Color.White,
                         contentColor = Color(0xFF4D4D4D)
@@ -100,10 +91,5 @@ fun InicioScreen(
             }
 
         }
-
-
     }
-
-
-
 }
